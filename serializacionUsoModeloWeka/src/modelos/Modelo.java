@@ -26,7 +26,7 @@ public class Modelo {
     private Instances leerInstancias(String ficherArff){
         try{
             //Instances inst = new Instances(new BufferedReader(new FileReader("./training_data/iris.arff")));
-            Instances inst = new Instances(new BufferedReader(new FileReader("./training_data/" + ficherArff)));
+            Instances inst = new Instances(new BufferedReader(new FileReader("./training_data/atpData.arff")));
             inst.setClassIndex(inst.numAttributes() - 1);
 
             return inst;
@@ -44,7 +44,7 @@ public class Modelo {
 
             // train
             //Instances inst = leerInstancias("./training_data/iris.arff");
-            Instances inst = leerInstancias("atpData.arff");
+            Instances inst = leerInstancias("./training_data/atpData.arff");
             cls.buildClassifier(inst);
 
             // serialize model
@@ -61,9 +61,8 @@ public class Modelo {
 
     public String aplicarModelo() {
         try{
-            String[] valoresAtributos = {"Iris-setosa", "Iris-versicolor", "Iris-virginica"};
-            Classifier clasificador  = (Classifier) weka.core.SerializationHelper.read("./models/objetoJ48Iris.model");
-            Instances data = leerInstancias("./test_data/test.arff");
+            //String[] valoresAtributos = {"Iris-setosa", "Iris-versicolor", "Iris-virginica"};
+            //Classifier clasificador  = (Classifier) weka.core.SerializationHelper.read("./models/objetoJ48Iris.model");
             return valoresAtributos[(int) clasificador.classifyInstance(data.instance(0))];
         }catch (Exception ex) {
             Logger.getLogger(Modelo.class.getName()).log(Level.SEVERE, null, ex);
