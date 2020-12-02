@@ -1,21 +1,20 @@
 package dominio;
 
 public class Consulta {
-	private int tournament_id;
+	private int tournamentId;
 	private String court;
 	private String surface;
 	private int roundImp;
 	private int bestOf;
 	private int player0;
 	private int player1;
-	private int winner;
 
-	public void setTournament(int tournament) {
- 	   this.tournament = tournament;
+	public void setTournamentId(int tournamentId) {
+ 	   this.tournamentId = tournamentId;
     }
 
-    public int getTournament() {
-        return tournament;
+    public int getTournamentId() {
+        return tournamentId;
     }
 
 	public void setCourt(String court) {
@@ -43,14 +42,14 @@ public class Consulta {
     }
 
     public void setBestOf(int bestOf) {
- 			this.bestOf = bestOf;
+ 		this.bestOf = bestOf;
     }
 
     public int getBestOf() {
         return bestOf;
     }
 
-    public void setPlayer0(String player0) {
+    public void setPlayer0(int player0) {
  		this.player0 = player0;
  	}
 
@@ -58,7 +57,7 @@ public class Consulta {
     	return player0;
     }
 
-    public void setPlayer1(String player1) {
+    public void setPlayer1(int player1) {
     	this.player1 = player1;
     }
 
@@ -66,28 +65,19 @@ public class Consulta {
         return player1;
     }
 
-    public void setWinner(int winner) {
- 	   	this.winner = winner;
-    }
-
-    public int getWinner() {
-        return winner;
-    }
-
-    public Consulta(String tournament, String court, String surface, int roundImp, int bestOf, int player0, int player1, int winner){
-    	this.tournament = tournament;
+    public Consulta(int tournamentId, String court, String surface, int roundImp, int bestOf, int player0, int player1){
+    	this.tournamentId = tournamentId;
     	this.court = court;
     	this.surface = surface;
     	this.roundImp = roundImp;
     	this.bestOf = bestOf;
     	this.player0 = player0;
     	this.player1 = player1;
-    	this.winner = winner;
     }
 
     @Override
     public String toString() {
-        return getTournament() + "," + getCourt() + "," + getSurface() + "," + getRoundImp() + "," + getBestOf() + "," + 
-            getPlayer0() + "," + getPlayer1() + "?" + "\n%\n%";
+        return getTournamentId() + "," + getCourt() + "," + getSurface() + "," + getRoundImp() + "," + getBestOf() + "," + 
+            getPlayer0() + "," + getPlayer1() + ",?" + "\n%\n%";
     }
 }
