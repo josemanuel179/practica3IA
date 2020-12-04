@@ -10,7 +10,6 @@ clear:
 	rm -rf html
 	rm -rf bin/*
 	rm -f $(jar_file)
-	rm -rf test_data/test.arff
 debug: compile_debug
 	cd bin
 	jdb -sourcepath ../src

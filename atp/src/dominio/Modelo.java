@@ -9,8 +9,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import weka.classifiers.Classifier;
 import weka.classifiers.AbstractClassifier;
-import weka.classifiers.trees.m5.M5Base;
-import weka.classifiers.trees.M5P;
+import weka.classifiers.trees.RandomTree;
 import weka.core.Instances;
 import weka.core.converters.ConverterUtils;
 
@@ -22,7 +21,8 @@ public class Modelo {
             inst.setClassIndex(inst.numAttributes() - 1);
 
             return inst;
-        } catch (IOException ex) {
+        } 
+        catch (IOException ex) {
             Logger.getLogger(Modelo.class.getName()).log(Level.SEVERE, null, ex);
             return null;
         }
@@ -30,16 +30,17 @@ public class Modelo {
 
     public void aprenderModelo() {
         try {
-            Classifier cls = new M5P();
+            Classifier cls = new RandomTree();
 
             Instances inst = leerInstancias("./training_data/atpData.arff");
             cls.buildClassifier(inst);
 
-            ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("./models/objetoM5PAtpData.model"));
+            ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("./models/objetoRandomTreeAtpData.model"));
             oos.writeObject(cls);
             oos.flush();
             oos.close();
-        } catch (Exception ex) {
+        } 
+        catch (Exception ex) {
             Logger.getLogger(Modelo.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -49,12 +50,14 @@ public class Modelo {
         try{
             String[] valoresAtributos = {"0","1"};
             TransformacionFichero f = new TransformacionFichero();
-            System.out.println(consulta);
+            f.copiarFile("./test_data/modeloTest.arff");
             f.copiarFileStr("./test_data/test.arff", consulta.toString());
-            Classifier clasificador = (Classifier) weka.core.SerializationHelper.read("./models/objetoM5PAtpData.model");
+            Classifier clasificador = (Classifier) weka.core.SerializationHelper.read("./models/objetoRandomTreeAtpData.model");
             Instances data = leerInstancias("./test_data/test.arff");
+            f.borrarFile("./test_data/test.arff");
             return valoresAtributos[(int) clasificador.classifyInstance(data.instance(0))];
-        }catch (Exception ex) {
+        }
+        catch (Exception ex) {
             Logger.getLogger(Modelo.class.getName()).log(Level.SEVERE, null, ex);
             return "Error al intentar leer el modelo";
         }

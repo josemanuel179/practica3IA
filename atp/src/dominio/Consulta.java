@@ -9,6 +9,7 @@ public class Consulta {
 	private int player0;
 	private int player1;
 
+
 	public void setTournamentId(int tournamentId) {
  	   this.tournamentId = tournamentId;
     }
