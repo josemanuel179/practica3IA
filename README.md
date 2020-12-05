@@ -1,6 +1,6 @@
 # Práctica 3 Aprendizaje Automático
 
-## Introducción
+## Introducción
 Aplicación Java para el análisis y predicción de resultados de partidos en la ATP (Asociación de Tenistas Profesionales).
 
 ## Datos
@@ -14,7 +14,7 @@ Aplicación Java para el análisis y predicción de resultados de partidos en la
 | 2015040   	  | Outdoor       | Grass    | 3         | 3       | 116     | 156     | 1      |
 | 2016046   	  | Outdoor       | Hard     | 5         | 3       | 37      | 29      | 1      |
 
-## Ejemplo de compilación y ejeccución de la aplicación
+## Ejemplo de compilación y ejeccución de la aplicación
 ```
 make jar
 java -jar aprendizaje.jar
