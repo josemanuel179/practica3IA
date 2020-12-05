@@ -74,8 +74,6 @@ public class Interfaz extends JFrame {
         boton.setBounds(190, 305, 150, 40);
         add(boton);
 
-        boton.addActionListener(new OyenteBoton());
-
         JLabel w = new JLabel("El GANADOR ES EL JUGADOR:");
         w.setBounds(600, 100, 220, 40);
         add(w);
@@ -83,6 +81,8 @@ public class Interfaz extends JFrame {
         winner = new JLabel();
         winner.setBounds(690, 125, 180, 40);
         add(winner);
+
+        boton.addActionListener(new OyenteBoton());
 
         setSize(950, 375);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -92,10 +92,10 @@ public class Interfaz extends JFrame {
   	private class OyenteBoton implements ActionListener {
     	@Override
         public void actionPerformed(ActionEvent e) {
-            Consulta c1 = new Consulta(Integer.parseInt(tournament_id.getText()), court.getText(), surface.getText(), 
-            	Integer.parseInt(round_imp.getText()), Integer.parseInt(best_of.getText()),
-            	Integer.parseInt(player0.getText()), Integer.parseInt(player1.getText()));
-            	System.out.println(c1);
+            Consulta c1 = new Consulta(Integer.parseInt(tournament_id.getText()), 
+                court.getText(), surface.getText(), Integer.parseInt(round_imp.getText()), 
+                Integer.parseInt(best_of.getText()), Integer.parseInt(player0.getText()), 
+                Integer.parseInt(player1.getText()));
             	Modelo modelo = new Modelo();
 				modelo.aprenderModelo();
 				String resultado = modelo.aplicarModelo(c1);

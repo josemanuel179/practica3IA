@@ -52,9 +52,11 @@ public class Modelo {
             TransformacionFichero f = new TransformacionFichero();
             f.copiarFile("./test_data/modeloTest.arff");
             f.copiarFileStr("./test_data/test.arff", consulta.toString());
+            
             Classifier clasificador = (Classifier) weka.core.SerializationHelper.read("./models/objetoRandomTreeAtpData.model");
             Instances data = leerInstancias("./test_data/test.arff");
             f.borrarFile("./test_data/test.arff");
+            
             return valoresAtributos[(int) clasificador.classifyInstance(data.instance(0))];
         }
         catch (Exception ex) {
