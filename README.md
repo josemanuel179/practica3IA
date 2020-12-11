@@ -37,3 +37,4 @@ java -jar aprendizaje.jar
 ![](capturaGUI.png)
 
 ## Selección algoritmos
+[](ALGORITOMOS.md)
