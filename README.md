@@ -40,11 +40,11 @@ java -jar aprendizaje.jar
 ## Selección Algoritmos
 La selección del algoritmo a usar se encuentra basada en el resultado del curva ROC, que son curvas en las que se presenta la sensibilidad en función de los falsos positivos para distintos puntos de corte.
 
- ROC Area                 | Multilayer Perceptron |
-:------------------------:| ---------------------:| 
-| Multilayer Perceptron   | 0,712 	              | 
-| Voted Perceptron        | 0,656                 | 
-| Simple Logistic  		  | 0,693		          |
+ ROC Area                 | Value |
+:------------------------:| -----:| 
+| Multilayer Perceptron   | 0,712 | 
+| Voted Perceptron        | 0,656 | 
+| Simple Logistic  		  | 0,693 |
 
 
 
