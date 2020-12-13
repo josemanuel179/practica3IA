@@ -1,22 +1,11 @@
 package dominio;
 
 public class Consulta {
-	private int tournamentId;
 	private String court;
-	private String surface;
 	private int roundImp;
 	private int bestOf;
 	private int player0;
 	private int player1;
-
-
-	public void setTournamentId(int tournamentId) {
- 	   this.tournamentId = tournamentId;
-    }
-
-    public int getTournamentId() {
-        return tournamentId;
-    }
 
 	public void setCourt(String court) {
  	   this.court = court;
@@ -24,14 +13,6 @@ public class Consulta {
 
     public String getCourt() {
         return court;
-    }
-
-    public void setSurface(String surface) {
- 		this.surface = surface;
-    }
-
-    public String getSurface() {
-        return surface;
     }
 
     public void setRoundImp(int roundImp) {
@@ -66,10 +47,8 @@ public class Consulta {
         return player1;
     }
 
-    public Consulta(int tournamentId, String court, String surface, int roundImp, int bestOf, int player0, int player1){
-    	this.tournamentId = tournamentId;
+    public Consulta(String court, int roundImp, int bestOf, int player0, int player1){
     	this.court = court;
-    	this.surface = surface;
     	this.roundImp = roundImp;
     	this.bestOf = bestOf;
     	this.player0 = player0;
@@ -78,7 +57,7 @@ public class Consulta {
 
     @Override
     public String toString() {
-        return getTournamentId() + "," + getCourt() + "," + getSurface() + "," + getRoundImp() + "," + getBestOf() + "," + 
-            getPlayer0() + "," + getPlayer1() + ",?" + "\n%\n%";
+        return getCourt() + "," + getRoundImp() + "," + getBestOf() + "," + getPlayer0() + 
+        "," + getPlayer1() + ",?" + "\n%\n%";
     }
 }

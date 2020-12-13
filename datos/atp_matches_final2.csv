@@ -1,20 +1,4 @@
-% 1. Title: ATP Database
-% 
-% 2. Sources:
-%      (a) Creator: Juan Coronado, Cristina Abdul-Massih, Jose Manuel Martinez
-%      (b) Date: December, 2020
-% 
-
-@RELATION atpData
-
-@ATTRIBUTE court 			{Outdoor,Indoor}
-@ATTRIBUTE round_imp		NUMERIC
-@ATTRIBUTE best_of	 		NUMERIC
-@ATTRIBUTE player0	  		NUMERIC
-@ATTRIBUTE player1 			NUMERIC
-@ATTRIBUTE winner			{player0,player1}
-
-@DATA
+court,round,best_of,player0,player1,winner
 Outdoor,7,3,63,77,player0
 Outdoor,7,3,5,56,player0
 Outdoor,7,3,40,655,player0

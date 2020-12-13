@@ -36,5 +36,13 @@ java -jar aprendizaje.jar
 ```
 ![](capturaGUI.png)
 
-## Selección algoritmos
-[](ALGORITOMOS.md)
+## Selección Algoritmos
+### Random Forest
+
+### Random Tree 
+
+### REP Tree
+
+### M5P
+
+### Decision Stump
