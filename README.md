@@ -31,6 +31,7 @@ Aplicación Java para el análisis y predicción de resultados de partidos en la
 
 ## Ejemplo de compilación y ejeccución de la aplicación
 ```
+cd atp
 make jar
 java -jar aprendizaje.jar
 ```
