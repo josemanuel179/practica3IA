@@ -48,7 +48,7 @@ public class Consulta {
     }
 
     public Consulta(String court, int roundImp, int bestOf, int player0, int player1){
-    	this.court = court;
+    	this.court = court;    
     	this.roundImp = roundImp;
     	this.bestOf = bestOf;
     	this.player0 = player0;

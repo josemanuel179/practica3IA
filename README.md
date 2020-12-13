@@ -38,12 +38,4 @@ java -jar aprendizaje.jar
 ![](capturaGUI.png)
 
 ## Selección Algoritmos
-### Random Forest
-
-### Random Tree 
-
-### REP Tree
-
-### M5P
-
-### Decision Stump
+### Perceptron Multicapa
