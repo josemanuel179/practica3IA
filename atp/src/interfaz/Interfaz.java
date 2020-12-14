@@ -10,7 +10,7 @@ public class Interfaz extends JFrame {
 	private JButton boton;
 	private JLabel winner;
 
-    Modelo modelo = new Modelo();
+	Modelo modelo = new Modelo();
 
 	public Interfaz() {
     	super("Aplicación Aprendizaje Automático");
@@ -83,7 +83,7 @@ public class Interfaz extends JFrame {
             Consulta c1 = new Consulta(court.getText(), Integer.parseInt(round_imp.getText()), 
                 Integer.parseInt(best_of.getText()), Integer.parseInt(player0.getText()), 
                 Integer.parseInt(player1.getText()));
-            	//Modelo modelo = new Modelo();
+            	  //Modelo modelo = new Modelo();
 				//modelo.aprenderModelo();
 				String resultado = modelo.aplicarModelo(c1);
             if(resultado.isEmpty()) {
