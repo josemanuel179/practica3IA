@@ -44,7 +44,10 @@ La selección del algoritmo a usar se encuentra basada en el resultado del curva
 :------------------------:| -----:| 
 | Multilayer Perceptron   | 0,712 | 
 | Voted Perceptron        | 0,656 | 
-| Simple Logistic  		  | 0,693 |
-
-
-
+| Simple Logistic  		     | 0,693 |
+| SGD  		                 | 0,641 |
+| Logistic  		            | 0,693 |
+| Bayes Net  		           | 0,710 |
+| SMO  		                 | 0,622 |
+| JRip       		           | 0,673 |
+| Random Forrest          | 0,644 |
