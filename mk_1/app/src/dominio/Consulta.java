@@ -60,4 +60,4 @@ public class Consulta {
         return getCourt() + "," + getRoundImp() + "," + getBestOf() + "," + getPlayer0() + 
         "," + getPlayer1() + ",?" + "\n%\n%";
     }
-}
+
